@@ -1,0 +1,17 @@
+name: GitHub Actions Demo
+
+on: [push]
+
+jobs:
+  echo_hello_world:
+    # 実行環境の設定
+    runs-on: ubuntu-latest
+    # ここからはStepの設定
+    steps:
+      # Stepの名前
+      - name: Checkout repository
+        # Actionの実行
+        uses: actions/checkout@v4
+      - name: Print hello
+        # スクリプトの実行
+        run: echo "Hello"
